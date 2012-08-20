@@ -1,0 +1,33 @@
+---
+layout: post
+title: K-Means Cluster Algorithm
+author: <a href="http://taiyun.github.com/">Taiyun</a>
+---
+
+
+```{r setup, include=FALSE}
+opts_chunk$set(fig.width=6, fig.height=6, 
+               fig.path='pictures/k-means/')
+opts_knit$set(animation.fun = hook_scianimator, base.url = "http://animation.r-forge.r-project.org/")
+render_jekyll()
+```
+
+
+Move! Average! Cluster! Move! Average! Cluster!...
+
+The k-Means cluster algorithm may be regarded as a series of iterations of: finding cluster centers, computing distances between sample points, and redefining cluster membership.
+
+The data given by x is clustered by the k-means method, which aims to partition the points into k groups such that the sum of squares from points to the assigned cluster centers is minimized. At the minimum, all cluster centres are at the mean of their Voronoi sets (the set of data points which are nearest to the cluster centre).
+
+## R Code and Animation
+``` {r k-means, fig.show='animate',out.height='600px',out.width='600px'}
+library(animation) 
+par( mar = c(3, 3, 1, 1.5), mgp = c(1.5, 0.5, 0), bg="white") 
+cent = 1.5 * c(1, 1, -1, -1, 1, -1, 1, -1) 
+x = NULL
+for (i in 1:8) x = c(x, rnorm(25, mean = cent[i])) 
+x = matrix(x, ncol = 2) 
+colnames(x) = c("X1", "X2") 
+kmeans.ani(x, centers = 4, pch = 1:4, col = 1:4) 
+```
+

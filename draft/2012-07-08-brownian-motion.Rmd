@@ -1,0 +1,25 @@
+---
+layout: post
+title: Brownian Motion
+author: <a href="http://taiyun.github.com/">Taiyun</a>
+---
+
+```{r setup, include=FALSE, tidy=FALSE}
+opts_chunk$set(fig.width=6, fig.height=6, comment = '#:',
+               fig.path='pictures/brownian-motion/')
+opts_knit$set(animation.fun = hook_scianimator, base.url = "http://animation.r-forge.r-project.org/")
+render_jekyll()
+```
+
+
+The function `brownian.motion()` has illustrated the phenomenon of Random Walk on the 2D plane. For a point `(x, y)`, its next location is `(x + rnorm(1), y + rnorm(1))`.
+
+## R Code and Animation
+``` {r brownian-motion, fig.show='animate',out.height='600px',out.width='600px',dev='CairoPNG'}
+library(animation)
+ani.options(interval = 0.05, nmax = 100)
+par(mar = c(3, 3, 1, 0.5), mgp = c(2, 0.5, 0), tcl = -0.3, bg="white",
+cex.axis = 0.8, cex.lab = 0.8, cex.main = 1)
+brownian.motion(pch = 21, cex = 5, col = "red", bg = "yellow")
+```
+
