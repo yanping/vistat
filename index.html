@@ -1,17 +1,21 @@
 ---
 layout: common
 ---
-
+  
 {% for post in site.posts %}
   <div class="webblogPost">
-  <h3><a href=" {{post.url}} "> {{ post.title }} </a></h3>
-      
+
+  <h3><a href=" {{post.url}} "> {{ post.title }} </a></h3> 
       <div id="weblogPostBody">
   
       {{ post.content }}
       
       </div>
+
   </div>
   
+
   <div class="weblogPostDateline"><span class="weblogPostDisplayDate"><a href=" {{ post.url }} "> {{ post.date | date: "%d %B %Y" }} </a></span></div>	
+
+	  
 {% endfor %}

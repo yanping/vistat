@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Vistat by supstat</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
+    <script src="/javascripts/main.js"></script>
 	<link rel="stylesheet" href="/css/scianimator.css" />  
     <script src="/js/jquery-1.4.4.min.js"></script>
     <script src="/js/jquery.scianimator.min.js"></script>
@@ -17,14 +17,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
   </head>
-  <body>
 
+ <body>
       <header>
         <h1>Vistat</h1>
         <p>A gallery of statistical graphics and visualizations</p>
       </header>
-
-      <div id="banner">
+ <div id="banner">
         <span id="logo"></span>
 
         <a href="https://github.com/supstat/vistat" class="button fork"><strong>View On GitHub</strong></a>
@@ -37,9 +36,19 @@
         </div>
       </div><!-- end banner -->
 
-  
-	{{ content }}
-  
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+	  <article id="index">  
+<div id="site" class="site">
+{{ content }}
+</div>
+</article>
+	  </section>
+ 
+
       <footer>
         <p>Project maintained by <a href="https://github.com/supstat">supstat</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
