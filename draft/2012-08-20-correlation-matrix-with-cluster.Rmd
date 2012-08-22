@@ -1,0 +1,23 @@
+---
+layout: post
+title: Visualize Correlation Matrix with Cluster Analysis
+author: <a href="http://taiyun.github.com/">Taiyun</a>
+---
+
+
+```{r setup, include=FALSE}
+opts_knit$set(upload.fun = imgur_upload) 
+opts_chunk$set(fig.width=8, fig.height=8, out.extra='style="display:block; margin: auto"')
+render_jekyll()
+```
+
+We can do hierarchical cluster analysis and reorder the correlation matrix based on the clusters; 
+then visualize it and draw clusters squares on the graph. 
+
+
+``` {r  corrplot-CM, dev="CairoPNG", out.height='600px',out.width='600px'}
+library(corrplot) 
+M <- cor(mtcars)
+corrplot(M, order="hclust", addrect=2, tl.pos="d")
+```
+
