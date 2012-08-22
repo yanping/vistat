@@ -15,5 +15,5 @@ Please use pull requests, and forget about emails.
      
 NOTE:  
 
-* Please put .Rmd files in draft folder and .md files in _post files.  
+* Please put .Rmd files in draft folder and .md files in _post folder.  
 * Please upload graphs on other websites.
