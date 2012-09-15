@@ -23,3 +23,4 @@ cex.axis = 0.8, cex.lab = 0.8, cex.main = 1)
 brownian.motion(pch = 21, cex = 5, col = "red", bg = "yellow")
 ```
 
+`r n`
